@@ -1,0 +1,38 @@
+<!-- Using a For loop, create a script that adds an eight percent tax to sales transactions ranging from 1 and 50 dollars.
+
+Display both the Sales and Total figures in consecutive rows of a table.
+
+Add a $ symbol before each Sales figure and Total.
+
+Don't worry about rounding the numbers. You will learn about number formatting in the future units. -->
+<!DOCTYPE html>
+  <html>
+<head>
+  <style>
+    table td {
+      border: 1px solid black;
+
+    }
+  </style>
+  <title>Add Sales Tax</title>
+
+</head>
+  <body>
+
+
+  
+  <script>
+  function salesTax(dollarAmount) {
+     var withSalesTax = (dollarAmount * 0.8) + dollarAmount;
+  }
+    var money = "<table>"
+
+  for(i=1; i < 51; i++)
+  {
+  money += ("<tr><td>") + "$" +i + "</td><td> " + "$" + ((i * 0.8) + i) + "</td></tr>";
+  }
+  document.write(money);
+  </script>
+  </body>
+
+</html>

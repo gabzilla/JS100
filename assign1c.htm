@@ -1,0 +1,45 @@
+<!--The formula for calculating body mass index (BMI) is weight*  703 / height 2. For example, if your weight 200 pounds and are 72 inches tall, then you can calculate your body mass index with this expression: (200 * 703) / (72 * 72). Create a script that asks for the visitor's weight in pounds and his/her height in inches. The program should then calculate the body mass of the visitor. Display the weight, height, and body mass on the screen. Include text in the document.write() statements that describe each measure such as "Your weight is 200 pounds."-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BMI Calculator</title>
+</head>
+<body>
+<h1>Body Mass Index Calculator</h1>
+<div>Enter your height in inches:
+  <input type="text" id="height" />
+
+</div>
+<div>Enter your weight in pounds:
+  <input type="text" id="weight" />
+
+</div>
+<button onclick="computeBMI()">Click here!</button>
+
+<h1>Your BMI is: <span id="output">?</span></h1>
+<h2><span id = "heightWeight"></span></h2>
+<h2>This means you are: <span id='comment'></span> </h2>
+<script type="text/javascript">
+  function computeBMI() {
+
+    var height = Number(document.getElementById("height").value);
+    var weight = Number(document.getElementById("weight").value);
+
+    var BMI = (weight * 703) / Math.pow(height, 2);
+
+    document.getElementById("output").innerHTML = Math.round(BMI) ;
+    document.getElementById("heightWeight").innerHTML ="Your height in inches is " + height + "<br>Your weight in is " + weight;
+    if (BMI < 18.5) document.getElementById("comment").innerHTML = "In the Underweight BMI range.";
+    if (BMI >= 18.5 && BMI <= 25) document.getElementById("comment").innerHTML = "In the normal BMI range.";
+    if (BMI >= 25 && BMI <= 30) document.getElementById("comment").innerHTML = "In the obese BMI range.";
+    if (BMI > 30) document.getElementById("comment").innerHTML = "In the overweight BMI range.";
+
+
+  }
+
+</script>
+
+
+</body>
+</html>

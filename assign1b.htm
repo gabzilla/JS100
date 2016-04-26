@@ -1,0 +1,39 @@
+<!--Create a Web page that asks users for a value. The program should then display the square(num * num) and the cube (num*num*num) of the number on the screen. -->
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<div>
+   <label>Please input a value!</label>
+   <input type="text" id="myNumber1" value=" ">
+   <button onclick="findTheSquare()">Click here!</button>
+</div>
+<div id="squared"></div>
+<div id="cubed"></div>
+
+<script type="text/javascript">
+
+
+  function findTheSquare()
+  {
+
+     
+    var x = Number(document.getElementById("myNumber1").value);
+    var currentVal = Math.pow(x,2);
+    (document.getElementById("squared").innerHTML = "Squared = " + currentVal);
+    Cubed();
+  }
+
+  function Cubed()
+  {
+    var x = Number(document.getElementById("myNumber1").value);
+    var currentVal = Math.pow(x,3);
+    (document.getElementById("cubed").innerHTML = "Cubed = " + currentVal);
+  }
+
+
+
+</script>
+</body>
+</html>

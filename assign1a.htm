@@ -1,0 +1,42 @@
+<!--Create a Web page that asks users for the values of three variables and calculates the average of those three values. The program should then display the average in an alert box.-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AverageOfThree</title>
+</head>
+    <body>
+    <h1>Average of Three</h1>
+      <div>Input three numbers to find their average!
+
+        <input type="text" id="myNumber1" value=" ">
+        <input type="text" id="myNumber2" value=" ">
+        <input type="text" id="myNumber3" value=" ">
+          <button onclick="averageOfThree()">Click here!</button>
+      </div>
+
+
+      <div id="numberInputs">
+
+      </div>
+
+    <script type="text/javascript">
+      function averageOfThree()
+     {
+
+      var x = Number(document.getElementById("myNumber1").value);
+      var y = Number(document.getElementById("myNumber2").value);
+      var z = Number(document.getElementById("myNumber3").value);
+
+
+      var currentVal = (x + y + z) / 3;
+
+        alert(document.getElementById("numberInputs").innerHTML =
+        ("The average of these numbers are " + currentVal));
+     }
+    </script>
+    </body>
+</html>
+
+
