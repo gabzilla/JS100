@@ -1,0 +1,41 @@
+<!-- Create an array called colors.
+Each element of the array is a string representing a color, for example, red.
+Use a for loop to display each element of the array with a color of the font the same color as the value of that array element.
+Hint: You can use the span tag along with the color style to change the color of the array members.-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <script type="text/javascript">
+
+      var colors = ["red ","orange ", "yellow ", "green ", "blue ", "indigo ", "violet "];
+      var string = "";
+
+
+
+      colors.forEach(function(color){
+        string += color + ": " + "<span style = 'color: " + color +"'>" + color + "</span>" + "<br>";
+      });
+      document.write(string);
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </head>
+
+<body>
+
+
+
+</body>
+</html>

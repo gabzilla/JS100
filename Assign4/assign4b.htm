@@ -1,0 +1,149 @@
+<!-- Create a Web page that lists the name of four products that your company sells.
+
+If the user clicks on any of the items, description and cost of the item should display below the item name dynamicllay. (Hint: use DOM node properties and methods.) -->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  h1 , h4 {
+  text-align: center;
+
+  }
+  .container {
+    text-align: center;
+
+  }
+
+  ul,li
+  { list-style-type: none;
+    list-style-position:inside;
+    margin:0;
+    padding:0;
+
+  }
+  
+  #tagLine {
+    color: grey;
+    text-align: center;
+  }
+
+  #displayText1 {
+    text-decoration:none;
+    color: black;
+
+  }
+  #displayText2 {
+    text-decoration:none;
+    color: black;
+
+  }
+  #displayText3 {
+    text-decoration:none;
+    color: black;
+
+  }
+  #displayText4 {
+    text-decoration:none;
+    color: black;
+
+  }
+  #displayText5 {
+    text-decoration:none;
+    color: black;
+
+  }
+
+</style>
+  <script type="text/javascript">
+    function toggle(elementId) {
+      var ele = document.getElementById(elementId);
+      if(ele.style.display == "block") {
+        ele.style.display = "none";
+      }
+      else {
+        ele.style.display = "block";
+      }
+    }
+  </script>
+</head>
+<body>
+<h1>Turf Wars</h1>
+<h4><em>As David Wondrich points out in his neat history on the drink(s) in Esquire, society gentlemen would frequent turf clubs to wager on horse races.</em></h4>
+<h6 id="tagLine"><em>Please enjoy our exclusive store that stocks only the best ingredients to recreate this iconic drink.</em></h6>
+<div class="listTree">
+<!-- first item -->
+<div class ="container">
+  <a id="displayText1" href="javascript:toggle('toggleText1');">Genuine Gin</a>
+  <div id="toggleText1" style="display: none" href="javascript:toggle();">
+  <ul>
+  <br>
+  <li>  <em>It takes two to tango
+    or so they say,
+    but it only takes me
+    to Tanqueray.</em></li>
+  <li>$28.99</li>
+  </ul>
+  </div>
+  <!-- second item -->
+  <div class ="container">
+  <br>
+    <a id="displayText2" href="javascript:toggle('toggleText2');">Vibrant Vermouth</a>
+    <div id="toggleText2" style="display: none" href="javascript:toggle();">
+    <br>
+    <li>
+        <em>James Bond was a dissolute youth
+          who spent his nights drinking Vermouth</em>
+      </li>
+    <li>$15.99</li>
+    </div>
+    </div>
+    <br>
+  <!-- third item -->
+    <div class ="container">
+    <a id="displayText3" href="javascript:toggle('toggleText3');">Marvolous Maraschino Liqueur</a>
+    <div id="toggleText3" style="display: none" href="javascript:toggle();">
+    <br>
+    <li><em>Cherry, a Cherry!
+      We all know it's a berry!
+      Why call it a fruit?</em></li>
+    <li>$20.00</li>
+    </div>
+    </div>
+    <br>
+  <!-- fourth item -->
+  <div class ="container">
+    <a id="displayText4" href="javascript:toggle('toggleText4');">Olfactible Orange Bitters</a>
+    <div id="toggleText4" style="display: none" href="javascript:toggle();">
+    <br>
+      <li><em>Orange doesn&#39;t ryhme with anything</em></li>
+      <li>$13.00</li>
+      <br>
+      <br>
+      <small><a id="displayText5" href="javascript:toggle('toggleText5');">Make the Turf Cocktail</a>
+      <div id="toggleText5" style="display: none" href="javascript:toggle();">
+      <br>
+        <li>
+          1 1/2 ounces gin
+        </li>
+        <li>
+          3/4 ounce dry vermouth
+        </li>
+        <li>
+          1/4 ounce maraschino liqueur
+        </li>
+        <li>
+          2 dashes orange bitters
+        </li>
+        <li>
+          2 dashes absinthe (optional)
+        </li>
+      </small>
+
+
+    </div>
+  </div>
+  <br>
+  </div>
+</div>
+</body>
+</html>
