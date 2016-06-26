@@ -1,0 +1,50 @@
+<!-- Write a program that displays the system's date and time on the title of the browser with the format shown in the following
+picture. The time should be updated every second. -->
+
+<!DOCTYPE html>
+ <html>
+    <head>
+        <script type="text/javascript">
+            function showDate() {
+                var now = new Date();
+                var months = new Array('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12');
+                var date = ((now.getDate() < 10) ? "0" : "") + now.getDate();
+
+                function fourdigits(number) {
+                    return (number < 1000) ? number + 1900 : number;
+                }
+
+                tnow = new Date();
+                thour = now.getHours();
+                tmin = now.getMinutes();
+                tsec = now.getSeconds();
+
+                if (tmin <= 9) {
+                    tmin = "0" + tmin;
+                }
+                if (tsec <= 9) {
+                    tsec = "0" + tsec;
+                }
+                if (thour < 10) {
+                    thour = "0" + thour;
+                }
+
+
+
+
+
+                document.title =  months[now.getMonth()] + "/" + date + "/" + (fourdigits(now.getYear()))+ " " + thour + ":" + tmin + ":" + tsec;
+               // console.log(months[now.getMonth()] + "/" + date + "/" + (fourdigits(now.getYear()))+ " " + thour + ":" + tmin + ":" + tsec);
+                document.getElementById("dateDiv").innerHTML =  months[now.getMonth()] + "/" + date + "/" + (fourdigits(now.getYear()))+ " " + thour + ":" + tmin + ":" + tsec;
+            }
+            setInterval("showDate()", 1000);
+             </script>
+    </head>
+<title>
+
+</title>
+
+    <body>
+    <h1><div id="dateDiv" style="text-align: center"></div></h1>
+    </body>
+</html>

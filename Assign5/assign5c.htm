@@ -1,0 +1,129 @@
+<!-- Create a Web page containing JavaScript statements and functions that perform the following:
+Today's date should be displayed in the following format:
+Today is: mm/dd/yyyy
+If the day is Monday, Tuesday, or Wednesday, display a message that says "Have a nice week!"
+If the day is Thursday or Friday, display a message that says "The weekend is almost here!"
+If the day is Saturday or Sunday, display a message that says "Enjoy the weekend!"
+If the date is after the 25th of a month, display a message that says "Next month is just around the corner!" -->
+
+
+<!DOCTYPE html>
+<head>
+    <!--<script type="text/javascript">-->
+        <!--function date_time(id)-->
+        <!--{-->
+            <!--date = new Date;-->
+            <!--year = date.getFullYear();-->
+            <!--month = date.getMonth();-->
+            <!--months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'Jully', 'August', 'September', 'October', 'November', 'December');-->
+            <!--d = date.getDate();-->
+            <!--day = date.getDay();-->
+            <!--days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');-->
+            <!--h = date.getHours();-->
+            <!--if(h<10)-->
+            <!--{-->
+                <!--h = "0"+h;-->
+            <!--}-->
+            <!--m = date.getMinutes();-->
+            <!--if(m<10)-->
+            <!--{-->
+                <!--m = "0"+m;-->
+            <!--}-->
+            <!--s = date.getSeconds();-->
+            <!--if(s<10)-->
+            <!--{-->
+                <!--s = "0"+s;-->
+            <!--}-->
+            <!--result = ''+days[day]+' '+months[month]+' '+d+' '+year+' '+h+':'+m+':'+s;-->
+            <!--document.getElementById(id).innerHTML = result;-->
+            <!--setTimeout('date_time("'+id+'");','1000');-->
+            <!--return true;-->
+        <!--}-->
+    <script>
+    function showDate() {
+        var now = new Date();
+        var days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
+        var months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+        var date = ((now.getDate() < 10) ? "0" : "") + now.getDate();
+
+            tday = now.getDay();
+            if(tday === 0) {
+                tday = "Enjoy the weekend!";
+            }
+            if(tday === 1) {
+                tday ="Have a nice week!";
+             }
+             if(tday === 2) {
+                 tday ="Have a nice week!";
+             }
+            if(tday === 3) {
+                tday ="Have a nice week!";
+            }
+            if(tday === 4) {
+            tday ="The weekend is almost here!";
+            }
+            if(tday === 5) {
+            tday ="The weekend is almost here!";
+            }
+            if(tday === 6) {
+            tday ="Enjoy the weekend!";
+            }
+
+        tdate = now.getDate();
+        if(tdate > 25) {
+           tdate = "Next month is just around the corner!";
+        } else {
+            tdate = "";
+        }
+        function fourdigits(number) {
+            return (number < 1000) ? number + 1900 : number;
+        }
+
+        tnow = new Date();
+        thour = now.getHours();
+        tmin = now.getMinutes();
+        tsec = now.getSeconds();
+
+        if (tmin <= 9) {
+            tmin = "0" + tmin;
+        }
+        if (tsec <= 9) {
+            tsec = "0" + tsec;
+        }
+        if (thour < 10) {
+            thour = "0" + thour;
+        }
+
+
+
+                //+ " - " + thour + ":" + tmin + ":" + tsec;
+
+        document.getElementById("dateDiv").innerHTML = "Today is " + months[now.getMonth()] + " / " + date + " / " + (fourdigits(now.getYear()));
+        document.getElementById("comment").innerHTML = tday + tdate;
+    }
+        setInterval("showDate()", 1000);
+//    var day = new Date().getDay();
+//    if (day > 24) {
+//        document.getElementById("demo").innerHTML = "Next month is just around the corner!";
+//    }
+
+
+    </script>
+</head>
+    <title>
+
+    </title>
+<body>
+
+<p>
+
+
+   <h1><div id="dateDiv" style="text-align: center"></div></h1>
+
+<h1><div id="comment" style="text-align: center"></div></h1>
+    </div>
+</p>
+
+
+</body>
+</html>
