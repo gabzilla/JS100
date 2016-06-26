@@ -5,30 +5,45 @@ Each link should change the background color to a different color. -->
 <!DOCTYPE html>
   <html>
   <head>
+<style>
 
+  h1 {
+    text-align: center;
+  }
+  .container {
+    text-align: center;
+  }
+  #pink {
+    text-decoration:none;
+    color: hotpink;
+  }
+  #purps {
+    text-decoration:none;
+    color: purple;
+  }
+  #aqua {
+    text-decoration:none;
+    color: aqua;
+  }
+</style>
 
+  <body>
+  <h1>Background Color Fun</h1>
+  <div class="container">
 <a href ="http://www.placekitten.com"
 onMouseOver="document.bgColor='pink';
-return true">Pink!</a>
-
-<br>
+return true" id="pink">Pink!</a>
+<br><br>
 
 <a href ="http://www.placekitten.com"
        onMouseOver="document.bgColor='purple';
-return true">Purple!</a>
+return true" id="purps">Purple!</a>
 
-<br>
+<br><br>
 
     <a href ="http://www.placekitten.com"
-       onMouseOver="document.bgColor='black';
-return true">Black!</a>
-
-<br>
-
-
-
-  </head>
-    <body>
-
+       onMouseOver="document.bgColor='aqua';
+return true" id="aqua">Black!</a>
+  </div>
     </body>
   </html>

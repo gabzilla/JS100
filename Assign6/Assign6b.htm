@@ -1,0 +1,34 @@
+<!--Originala Prompt method ask the visitors to type a string containing multiple words.
+Using the String object methods display the following information on the screen:
+The string that was typed by the visitor
+The lowercase and uppercase versions of the string
+Divide the string into separate words and display each word on a separate line -->
+
+
+<script type="text/javascript">
+    function myFunction() {
+        var input = prompt("Please type a string of words", "");
+        var wordString = "";
+        var output = input.split(" ");
+        for(var wordKey in output ) {
+            wordString += output[wordKey] + "<br>";
+        }
+        if (input != null) {
+            document.getElementById("demo").innerHTML =
+                    "Original String " + input + "<br>" + "Lowercase version: " + input.toLowerCase() + "<br>" + "Uppercase version: " + input.toUpperCase() + "<br>" + "Divide string: " + "<br>" + wordString;
+
+        }
+    }
+
+
+
+
+
+</script>
+
+<body>
+
+<body onload="myFunction()">
+
+<p id="demo"></p>
+</body>

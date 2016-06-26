@@ -1,0 +1,93 @@
+
+<head>
+  <style type="text/css">
+
+    #box {
+      display: none;
+      position: fixed;
+      top: 20%;
+      left: 20%;
+      width: 200px;
+      height: 200px;
+      padding: 0;
+      margin:0;
+      border: 1px solid black;
+      background-color: white;
+      z-index:11;
+      overflow: hidden;
+    }
+    #boxclose{
+      float:right;
+      position:absolute;
+      top: 3px;
+      right: 0;
+      color:red;
+      width:20px;height:20px;
+      margin-right:0px;
+    }
+    #boxcontent{
+      position:absolute;
+      top:30px;
+      left:0;
+      right:0;
+      bottom:0;
+      margin:0 0 0 0;
+      padding-left: 20px;
+      width:100%;
+      height:100%;
+      overflow:hidden;}
+  </style>
+  <title></title>
+    </head>
+<body>
+<br>
+<p>
+  <a href="http://www.google.com" target="_blank" onClick="document.getElementById('niceBox').style.display='block';
+          document.getElementById('box').style.display='block';">click me!</a>
+<div id="niceBox"></div>
+<div id="box">
+       <span id="boxclose" onClick="document.getElementById('box').style.display='none';
+       document.getElementById('niceBox').style.display='none'"> X</span>
+  <div id="boxcontent"  style="text-align: center">This is a nice message! </div>
+</div>
+</p>
+<br>
+
+<!-- second box -->
+
+<br>
+<p>
+    <a href="http://www.webcrawler.com" target="_blank" onClick="document.getElementById('box2').style.display='block';
+          document.getElementById('box').style.display='block';">click me!</a>
+</p>
+<div id="box2"></div>
+<div id="box">
+       <span id="boxclose" onClick="document.getElementById('box').style.display='none';
+       document.getElementById('niceBox').style.display='none'"> X</span>
+    <div id="boxcontent1" style="text-align: center">This is a nicer message :) </div>
+</div>
+<br>
+<p>
+  <a href="http://www.yahoo.com" target="_blank" onClick="document.getElementById('niceBox').style.display='block';
+          document.getElementById('box').style.display='block';">click me!</a>
+<div id="niceBox"></div>
+<div id="box">
+       <span id="boxclose" onClick="document.getElementById('box').style.display='none';
+       document.getElementById('niceBox').style.display='none'"> X</span>
+  <div id="boxcontent2"  style="text-align: center">This is a nice message! </div>
+</div>
+</p>
+<br>
+<p>
+  <a href="http://www.bing.com" target="_blank" onClick="document.getElementById('niceBox').style.display='block';
+          document.getElementById('box').style.display='block';">click me!</a>
+<div id="niceBox"></div>
+<div id="box">
+       <span id="boxclose" onClick="document.getElementById('box').style.display='none';
+       document.getElementById('niceBox').style.display='none'"> X</span>
+  <div id="boxcontent3"  style="text-align: center">This is a nice message! </div>
+</div>
+</p>
+
+
+</body>
